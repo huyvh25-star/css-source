@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* auto-fit : khi bạn muốn: số cột tự co dãn dựa trên nội dung và đều nhau. */
+            /* Dùng auto-fill khi bạn cần "dựng" những cột cố định (ví dụ để background pattern hiển thị dạng lưới kể cả khi thiếu item).  */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /* sử dụng grid auto flow : colurm là để không xuống dòng : row là xuống dòng */
+            grid-auto-flow: column;
+            /* giữ kích thước của cột */
+            grid-auto-columns: minmax(200px, 1fr);
+            gap: 5px;
+        }
+
+        .card {
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">cột 1
+            <p>abc</p>
+        </div>
+        <div class="card">cột 2
+            <p>abc</p>
+            <p>abc</p>
+            <p>abc</p>
+        </div>
+
+        <div class="card">cột 3
+            <p>abc</p>
+            <p>abc</p>
+        </div>
+        <div class="card">cột 4
+            <p>abc</p>
+            <p>abc</p>
+            <p>abc</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
