@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng Bố cục trang web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-areas: "header header header" "sidebar content content" "footer footer footer";
+            grid-template-rows: 100px 1fr 100px;
+            height: 100vh;
+            gap: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .header {
+            background-color: orange;
+            grid-area: header;
+        }
+
+        .sidebar {
+            background-color: skyblue;
+            grid-area: sidebar;
+        }
+
+        .content {
+            background-color: green;
+            grid-area: content;
+        }
+
+        .footer {
+            background-color: rgb(135, 255, 65);
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
